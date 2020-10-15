@@ -3,6 +3,7 @@
 //
 
 #include "LinkStack.h"
+#include <sstream>
 
 LinkStack::LinkStack() {
     top = nullptr;
@@ -26,6 +27,12 @@ void LinkStack::push(char item) {
 }
 
 char LinkStack::pop() {
+    if(isEmpty()) {
+        std::ostringstream s;
+        s << "栈为空\n";
+        throw s.str();
+    }
+
     Node* deleteNode = top;
     char deleteElement = deleteNode->element;
 
