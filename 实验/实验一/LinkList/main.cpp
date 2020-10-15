@@ -120,6 +120,8 @@ int main() {
         std::cout << s;
     }
     std::cout << '\n';
+    delete l1;
+
 
     int testNumber2[] = { 1, 3, 5, 6, 7, 9 };
     int testNumber3[] = { 2, 4, 5, 8};
@@ -137,6 +139,10 @@ int main() {
     l2->PrintList();
     std::cout << '\n';
 
+    delete l2;
+    delete l3;
+
+
     int testNumber4[] = { 1, 3, 5, 6, 7, 9 };
     int testNumber5[] = { 2, 4, 5, 8, 10, 11};
 
@@ -151,5 +157,9 @@ int main() {
     std::cout << "l4, l5合并：";
     l4->Merge(*l5);
     l4->PrintList();
+
+    delete l4;
+    delete l5;
+
     return 0;
 }
