@@ -91,14 +91,14 @@ void yHTriangle(int line) {
                     int currentElement = preLine->pop();
                     preLine->push(currentElement + preLine->front());
 
-                    if (currentElement) {
-                        std::cout << currentElement << ' ';
-                    }
-
                     if(currentElement < 0) {
                         std::ostringstream s;
                         s << "\n数据超出int上限\n";
                         throw s.str();
+                    }
+
+                    if (currentElement) {
+                        std::cout << currentElement << ' ';
                     }
 
                 }
