@@ -3,6 +3,7 @@
 #include <sstream>
 template<class T>
 LinkList<T>::LinkList() {
+    head = new Node<T>;
     head->next = nullptr;
 }
 
