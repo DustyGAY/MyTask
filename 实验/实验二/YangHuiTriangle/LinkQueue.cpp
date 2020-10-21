@@ -12,11 +12,12 @@ LinkQueue::LinkQueue() {
 LinkQueue::~LinkQueue() {
     Node *deleteNode;
 
-    while(rearPos) {
+    while(frontPos) {
         deleteNode = frontPos;
         frontPos = frontPos->next;
         delete deleteNode;
     }
+
 }
 
 void LinkQueue::push(int item) {

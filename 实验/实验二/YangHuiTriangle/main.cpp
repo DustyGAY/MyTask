@@ -39,6 +39,15 @@ void yHTriangle(int line) {
         for(int i = 0; i < line; i++) {
             int size = preLine->size();
 
+//            if(!(i % 2)) {
+//                std::cout << ' ';
+//            }
+
+            for(int j = 0; j < line - i - 1; j++) {
+                std::cout << ' ';
+            }
+
+
 //            preLine->push(0);
 
             for(int j = 0; j < size - 1; j++){
@@ -84,6 +93,10 @@ void yHTriangle(int line) {
 
             for(int i = 0; i < line; i++) {
                 int size = preLine->size();
+
+                for(int j = 0; j < line - i - 1; j++) {
+                    std::cout << ' ';
+                }
 
 //                preLine->push(0);
 
