@@ -39,7 +39,7 @@ void yHTriangle(int line) {
         for(int i = 0; i < line; i++) {
             int size = preLine->size();
 
-            preLine->push(0);
+//            preLine->push(0);
 
             for(int j = 0; j < size - 1; j++){
                 int currentElement = preLine->pop();
@@ -58,7 +58,7 @@ void yHTriangle(int line) {
 
             }
 
-            preLine->pop();
+//            preLine->pop();
             preLine->push(0);
 
             std::cout << '\n';
@@ -85,7 +85,7 @@ void yHTriangle(int line) {
             for(int i = 0; i < line; i++) {
                 int size = preLine->size();
 
-                preLine->push(0);
+//                preLine->push(0);
 
                 for (int j = 0; j < size - 1; j++) {
                     int currentElement = preLine->pop();
@@ -103,7 +103,7 @@ void yHTriangle(int line) {
 
                 }
 
-                preLine->pop();
+//                preLine->pop();
                 preLine->push(0);
 
                 std::cout << '\n';
