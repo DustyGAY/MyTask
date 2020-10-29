@@ -27,6 +27,8 @@ int main() {
     std::cout << "BF:" << BF(searchStr, targetStr);
     end = clock();
     std::cout << ' ' << double(end - begin) / CLOCKS_PER_SEC * 1000 << "ms\n";
+
+    delete next;
     return 0;
 }
 
