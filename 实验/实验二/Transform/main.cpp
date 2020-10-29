@@ -2,6 +2,7 @@
 #include <sstream>
 #include "SeqStack.h"
 #include "LinkStack.h"
+//#include <time.h>
 
 int main() {
     try {
@@ -27,6 +28,9 @@ int main() {
         int choose;
         std::cout << "请选择数据结构：\n1.顺序栈\n2.链栈\n";
         std::cin >> choose;
+
+//        clock_t start, end;     //定义clock_t变量
+//        start = clock();      //开始时间
 
         if(choose == 1) {
             SeqStack *res = new SeqStack();
@@ -99,6 +103,12 @@ int main() {
                 s << choose << "是错误的选择\n";
                 throw s.str();
             }
+
+        std::cout << '\n';
+
+//        end = clock();   //结束时间
+//        std::cout << "time = " << end-start << "ms" << std::endl;  //输出时间（单位：ｓ）
+
     } catch (std::string s) {
         std::cout << s;
     }
