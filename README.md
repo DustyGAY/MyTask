@@ -15,5 +15,8 @@
     2. YangHuiTriangle:杨辉三角
     3. Calculate:四则运算
 
+- 实验三
+    1. CountNum:统计单词数
+    2. SearchStr:搜索字符串，KMP、BF实现
 ---
 **本项目所有代码均为作者本人创作，仅供学习参考，禁止用于其他用途。如发现bug，欢迎提交issue。**
