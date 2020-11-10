@@ -15,7 +15,7 @@
     2. YangHuiTriangle:杨辉三角
     3. Calculate:四则运算
 
-- 实验三
+- 实验三 串的操作
     1. CountNum:统计单词数
     2. SearchStr:搜索字符串，KMP、BF实现
 ---
