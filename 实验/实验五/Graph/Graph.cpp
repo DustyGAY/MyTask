@@ -52,11 +52,11 @@ void Graph::DFS() {
     for(int i = 0; i < vertexNum; i++) {
         if(!isVisited[i]) {
             printf("%c ", vertex[i].data);
+            isVisited[i] = 1;
         }
         DFS(&vertex[i]);
     }
     std::cout << '\n';
-    memset(isVisited, 0, sizeof(isVisited));
 }
 
 void Graph::BFS() {
