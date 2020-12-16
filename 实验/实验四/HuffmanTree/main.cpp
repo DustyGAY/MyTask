@@ -2,6 +2,7 @@
 #include "HuffmanTree.h"
 
 int main() {
+    freopen("test.txt", "r", stdin);
     std::string s;
     std::cin >> s;
     HuffmanTree *h = new HuffmanTree(s);
