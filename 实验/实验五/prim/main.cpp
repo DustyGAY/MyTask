@@ -9,7 +9,7 @@ struct Edge {
 };
 
 int main() {
-//    freopen("test.txt", "r", stdin);
+    freopen("test.txt", "r", stdin);
     Edge edge[10][10];
     memset(edge, 0, sizeof(edge));
 
@@ -20,9 +20,11 @@ int main() {
         std::cin >> begin;
         std::cout << "终点:\n";
         std::cin >> end;
-        if(begin > end) {
+        if(begin < end) {
             std::swap(begin, end);
         }
+        --begin;
+        --end;
         std::cout << "权值:\n";
         std::cin >> edge[begin][end].weight;
         edge[begin][end].isIn = 1;
@@ -33,18 +35,18 @@ int main() {
         int minEdge = -1;
         int pos;
         for(int j = 0; j < countRes; j++) {
-            for(int k = 0; k < i; k++) {
-                if(edge[k][i].isIn == 1) {
-                    if(edge[k][i].weight < minEdge || minEdge == -1) {
-                        minEdge = edge[k][i].weight;
+            for(int k = 0; k < j; k++) {
+                if(edge[res[j]][k].isIn == 1) {
+                    if(edge[res[j]][k].weight < minEdge || minEdge == -1) {
+                        minEdge = edge[res[j]][k].weight;
                         pos = k;
                     }
                 }
             }
-            for(int k = i + 1; k < 10; k++) {
-                if(edge[i][k].isIn == 1) {
-                    if(edge[i][k].weight < minEdge || minEdge == -1) {
-                        minEdge = edge[i][k].weight;
+            for(int k = res[j] + 1; k < 10; k++) {
+                if(edge[k][res[j]].isIn == 1) {
+                    if(edge[k][res[j]].weight < minEdge || minEdge == -1) {
+                        minEdge = edge[k][res[j]].weight;
                         pos = k;
                     }
                 }
@@ -52,19 +54,19 @@ int main() {
         }
         res[countRes++] = pos;
         for(int k = 0; k < pos; k++) {
-            if(edge[k][pos].isIn == 1) {
+            if(edge[pos][k].isIn == 1) {
                 for(int j = 0; j < countRes; j++) {
                     if(k == res[j]) {
-                        edge[k][pos].isIn = 1;
+                        edge[pos][k].isIn = 0;
                     }
                 }
             }
         }
         for(int k = pos + 1; k < 10; k++) {
-            if(edge[pos][k].isIn == 1) {
+            if(edge[k][pos].isIn == 1) {
                 for(int j = 0; j < countRes; j++) {
                     if(k == res[j]) {
-                        edge[k][pos].isIn = 1;
+                        edge[k][pos].isIn = 0;
                     }
                 }
             }
